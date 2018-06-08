@@ -1,0 +1,2 @@
+# spring-mybatixDemo
+spring集成mybatis传统代码，只需配置sqlSessionFactory、mapperScannerConfigurer和datasource即可
