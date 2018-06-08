@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<!-- 使用Spring 继承mybatis时，该文件的配置项不需要用到 -->
+<configuration>
+	<!-- 属性配置，类似于全局变量   -->
+	<!-- <properties>
+		<property name="driver" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/test?serverTimezone=UTC" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</properties> -->
+	<!-- 在此，你可以定义多个环境，表示开发、测试、预生产、生产 -->
+	<!-- <environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments> -->
+	<!-- mapper文件路径配置，默认会加载类路径下的资源，更多配置可以参见官方文档 -->
+	<!-- <mappers> <mapper resource="StudentMapper.xml" /> </mappers> -->
+</configuration>

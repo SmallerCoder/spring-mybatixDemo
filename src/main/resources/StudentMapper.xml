@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间配置，因为我们可能会有很多的mapper，为了更好的进行区别，我们通常会将该值设置为包名的全限定路径 -->
+<mapper namespace="com.wokao666.mappers.StudentMapper">
+ 	
+ 	<!-- 表示你的sql查询结果和java类型的一个映射，java类型通常是java bean -->
+	<resultMap type="com.wokao666.entity.Student" id="studentMap">
+		<result property="id" column="ID"/>
+		<result property="name" column="NAME" />
+		<result property="age" column="AGE" />
+		<result property="address" column="ADDRESS" />
+	</resultMap>
+	
+	<!-- select语句 ，根据条件进行查询，指定参数类型为map类型-->
+	<select id="getById" resultMap="studentMap" parameterType="java.util.Map">
+		select * from Student where id = #{id};
+	</select>	
+	
+	<select id="listStudents" resultMap="studentMap">
+		select * from Student;
+	</select>
+	
+</mapper>
